@@ -1,0 +1,578 @@
+html, body
+{
+    background-color: #FFF4D8;
+    font-family: "Noto Sans TC", sans-serif;
+    height: 100%;
+    margin: 0;
+    min-width:400px;
+}
+
+.wrapper
+{
+    min-height: 100%; /*外層高度100%*/
+    margin-bottom: -50px; /*隨footer高度需做調整*/
+}
+
+.wrapper .headerPage  a
+{
+    text-decoration: none;
+}
+/*-----------------------header-----------------------*/
+
+header
+{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    top: 0px;
+    opacity: 0.9;
+}
+
+header .logo
+{
+    font-size:40px;
+    color: #ffffff;
+    display: flex;
+    align-content: center;      
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+header ul
+{
+    padding: 0px;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-content: center;      
+    flex-wrap: wrap;   
+}
+
+header ul li
+{
+    display: flex;
+    align-content: center;      
+    flex-wrap: wrap;
+    list-style: none;
+    float: left;
+    position: relative; 
+}
+
+header nav ul li a 
+{
+    display: block;
+    color: #ffffff;
+    padding: 10px 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header .drop-down-taiwan ul 
+{
+    left: 20.29px;
+    width: 80%;
+    height: 225px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: calc(100% - 30px);
+    padding: 25px 0px ;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0px 0px  rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+}
+
+header .drop-down-author ul 
+{
+    left: 40.58px;
+    width: 60%;
+    height: 125px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: calc(100% - 30px);
+    padding: 25px 0px ;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0px 0px  rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+}
+
+header .drop-down-taiwan ul li
+{
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+header .drop-down-author ul li
+{
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+header .drop-down-taiwan ul li a
+{
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 250;
+    text-decoration: none;
+}
+
+header .drop-down-author ul li a
+{
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+header .logo:hover
+{
+    color: #ffffff;
+}
+
+header a:hover
+{
+    color: #1bb1dc;
+}
+
+header .drop-down-taiwan:hover>ul 
+{
+    opacity: 1;
+    top: 85%;
+    visibility: visible;
+}
+
+header .drop-down-author:hover>ul 
+{
+    opacity: 1;
+    top: 85%;
+    visibility: visible;
+}
+
+header .drop-down-taiwan>a:after 
+{
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+header .drop-down-author>a:after
+{
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+.menu 
+{
+    display: none;
+    margin: auto 0px;
+}
+
+header .menu-icon i
+{
+    color: #ffffff;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 350px) 
+{
+    header ul li 
+    {
+        text-align: center;
+    }
+    header ul 
+    {
+        display: none;
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    .menu
+    {
+        display: block;
+    }
+}
+
+/*-----------------------content-----------------------*/
+
+main
+{
+    margin-top: 125px;
+    padding-bottom: 50px; /*避免文字超出瀏覽器時，內容區塊不會和footer打架*/
+}
+
+main .goTopButton
+{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    display: none;
+    z-index: 10;
+}
+
+main .areaHeader
+{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+main .foodName
+{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+main .hashSec .container .col-lg-6
+{
+    height:50px;
+}
+
+main .hashSec .hashTag
+{
+    background-color: #D9D9D9;
+    font-size: 15px;
+    font-weight: 600;
+    width: 65px;
+    height: 25px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+main .hashSec .hashTime
+{
+    font-size: 15px;
+    font-weight: 600;
+    width: 150px;
+    height: 25px;
+    margin: 10px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+main .hashSec .recommand
+{
+    background-color: #FFC42C;
+    font-size: 20px;
+    font-weight: 600;
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    padding:10px 25px;
+    text-align: center;
+}
+
+main .foodImageSec
+{
+    display: flex;
+    justify-content: center;
+}
+
+main .foodImageSec img
+{
+    margin-top: 50px;
+    height: auto;
+    max-width: 700px;
+    min-width: 350px;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+main .foodInfoSec
+{
+    margin: 30px 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+main .likeFollowButton .container .col-lg-6
+{
+    width: 300px;
+}
+
+main .likeFollowButton .container button
+{
+    margin: 15px 30px;
+    width: 200px;
+    height: 50px;
+    background: #FFE08F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #FFE08F;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.mobile-nav 
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    left: -260px;
+    width: 260px;
+    padding-top: 18px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.4s;
+}
+
+.mobile-nav * 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav a 
+{
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.mobile-nav a:hover, .mobile-nav .active>a, .mobile-nav li:hover>a 
+{
+    color: #8dc2fa;
+    text-decoration: none;
+}
+
+.mobile-nav .drop-down-taiwan>a:after 
+{
+    content: "\f078";
+    font-family: FontAwesome;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .drop-down-author>a:after 
+{
+    content: "\f078";
+    font-family: FontAwesome;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .active.drop-down-taiwan>a:after 
+{
+    content: "\f077";
+}
+
+.mobile-nav .active.drop-down-author>a:after 
+{
+    content: "\f077";
+}
+
+.mobile-nav .drop-down-taiwan>a
+{
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down-author>a 
+{
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down-taiwan ul 
+{
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down-author ul 
+{
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down-taiwan li 
+{
+    padding-left: 20px;
+}
+
+.mobile-nav .drop-down-author li 
+{
+    padding-left: 20px;
+}
+
+.mobile-nav-toggle 
+{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-nav-toggle i 
+{
+    margin: 30px 20px;
+    color: #ffffff;
+}
+
+.mobile-nav-overly 
+{
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    display: none;
+}
+
+.mobile-nav-active 
+{
+    overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav 
+{
+    left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i 
+{
+    color: #fff;
+}
+
+/*-----------------------footer-----------------------*/
+
+footer
+{
+    background-color: #FFEBC6;
+    min-height: 550px;
+    width: 100%;
+}
+
+footer .footer-intro-title
+{
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: 50px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+footer .footer-intro
+{
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 20px;
+    line-height: 35px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+footer .footer-icon-link ul 
+{
+    display: flex;
+    justify-content: center;   
+    list-style: none;
+    padding: 0;
+    margin-top: 30px; 
+}
+
+footer .footer-icon-link ul li
+{
+    padding: 0px 20px;
+}
+
+footer .footer-icon-link a img
+{
+    width: 55px;
+    height: 55px;
+}
+
+footer .footer-contact-title
+{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 25px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+footer .form
+{
+    max-width: 500px;
+    margin: auto;
+}
+
+footer .form-group
+{
+    margin: 15px;;
+}
+
+footer #form-textarea
+{
+    min-height: 150px; 
+    max-height: 225px;
+}
+
+footer .form #sendmessage {
+    color: #fff;
+    background: #1bb1dc;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .form #errormessage {
+    color: #fff;
+    display: none;
+    background: red;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .form button
+{
+    background: #1bb1dc;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 30px;
+    color: #fff;
+    transition: 0.3s;
+}

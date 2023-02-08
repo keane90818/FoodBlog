@@ -1,0 +1,51 @@
+<header>
+    <div class="logo"><span style="color: red;">D</span>elicious<span style="color: red;">B</span>log</div>
+    <nav class="main-nav float-right d-none d-xl-block nav">
+        <ul>
+            <li>
+                <a href="index.html">首頁</a>
+            </li>
+            <li class="drop-down-taiwan">
+                <a href="#">美食台灣</a>
+                <ul>
+                    <li>
+                        <a href="Northfood.html" target="_blank">台灣（北部）</a>
+                    </li>
+                    <li>
+                        <a href="Centralfood.html" target="_blank">台灣（中部）</a>
+                    </li>
+                    <li>
+                        <a href="Southfood.html" target="_blank">台灣（南部）</a>
+                    </li>
+                    <li>
+                        <a href="Eastfood.html" target="_blank">台灣（東部）</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="drop-down-author">
+                <a href="#">關於作者</a>
+                <ul>
+                    <li>
+                        <a href="./personalWeb2/personal.html" target="_blank">簡嘉佑</a>
+                    </li>
+                    <li>
+                        <a href="./personalWeb1/index.html" target="_blank">蔡泊諺</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#footerPage">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+</header>
+<script src="mobile-nav.js"></script>
+<script>
+$(function(){
+    $('.logo').click(function(){
+        $('html,body').animate({
+            scrollTop:$('html').offset().top
+        })
+        return false;
+    });
+});
+</script>
